@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+## Weather App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Overview
 
-## Available Scripts
+This is a weather application built with React and Ant Design that displays weather details of different cities. The application fetches weather information from an API and allows the user to interact with the data in several ways, such as retrieving weather data for predefined cities, searching for city weather data, and clicking on individual cities to fetch their weather data.
+![image](https://github.com/user-attachments/assets/e26d1770-5b07-43fe-942c-66b68546d1d1)
 
-In the project directory, you can run:
+### Features
 
-### `npm start`
+- **Get Weather**: Fetches weather data for a predefined list of cities.
+- **Search**: Allows searching for a specific city and fetching its weather data.
+- **City Click**: Clicking on a city in the left-side table fetches and displays its weather details.
+- **Loader**: Displays a loading spinner when data is being fetched from the API.
+- **Editable Description**: The description field in the weather details table is editable by the user.
+- **Delete Row**: Removes the weather data row from the table.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **React**: Frontend framework for building the UI.
+- **Ant Design**: Component library for React providing UI elements.
+- **Axios**: Library used for making HTTP requests to the weather API.
+- **CSS**: Custom styling to apply the layout and color scheme.
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Before running the application, ensure you have the following installed:
 
-### `npm run build`
+- **Node.js** (>=14.x)
+- **npm** (>=6.x)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Follow these steps to get the application running locally:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/your-username/weather-app-2.git
+   cd weather-app-2
+   ```
 
-### `npm run eject`
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. **Start the development server**:
+   ```bash
+   npm start
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Open your browser and navigate to `http://localhost:3000`. You should see the weather app running.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### How to Use
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. **Get Weather**:
+   - Click the **Get Weather** button to fetch weather data for the predefined cities (London, New York, Los Angeles, Las Vegas).
+   - The first city will be highlighted, and its data will be displayed in the weather details table.
 
-## Learn More
+2. **Search**:
+   - Type a city name into the search bar and click the **Search** button.
+   - If the city is valid, weather data will be fetched from the API and displayed in the table.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. **City Click**:
+   - Click on any city in the **City List** on the left.
+   - Weather data for the selected city will be fetched and added to the weather details table.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. **Edit Description**:
+   - The **Description** field in the weather details table is editable. You can type in a custom description for each city.
 
-### Code Splitting
+5. **Delete Row**:
+   - Click the **Delete** link on any row to remove that city’s weather data from the table.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### API Used
 
-### Analyzing the Bundle Size
+The application uses the following API to fetch weather data:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```
+https://python3-dot-parul-arena-2.appspot.com/test?cityname=<city name>
+```
 
-### Making a Progressive Web App
+For example, to fetch the weather data for London, the app sends a GET request to:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```
+https://python3-dot-parul-arena-2.appspot.com/test?cityname=London
+```
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
